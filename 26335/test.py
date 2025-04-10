@@ -94,7 +94,7 @@ for fname in processed_filenames:
         continue
     try:
         test_difference = compute_difference(label_img, test_img)
-        sjj_answer = abs(test_difference - raw_difference)
+        sjj_answer = abs(test_difference / raw_difference)
         print(f"增强图像 {fname} 的difference值为: {test_difference:.2f}，sjj_answer为: {sjj_answer:.2f}")
     except Exception as e:
         print(f"处理图像 {fname} 时出错: {e}")
